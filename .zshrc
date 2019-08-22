@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(kubectl docker brew git golang osx postgres docker npm zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(httpie kubectl docker brew git golang osx postgres docker npm zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,3 +120,6 @@ export PATH=$PATH:$GOPATH/bin
 
 export TERM=xterm-256color
 export PATH="/usr/local/sbin:$PATH"
+export LC_ALL=en_US.UTF-8
+export MONO_GAC_PREFIX="/usr/local"
+export LIBRARY_PATH=:/usr/local/opt/openssl/lib/
