@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(httpie kubectl docker brew git golang osx postgres docker npm zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(rustup httpie kubectl docker brew git golang osx postgres docker npm zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,7 +115,8 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 
 # golang
-export GOPATH=$HOME/go
+export WorkDir=/Volumes/DATA/coding
+export GOPATH=$WorkDir/go
 export PATH=$PATH:$GOPATH/bin
 
 export TERM=xterm-256color

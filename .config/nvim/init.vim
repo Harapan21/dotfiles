@@ -4,6 +4,7 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'do': 'bash install.sh',
     \ }
 Plug 'junegunn/fzf'
+Plug 'kien/ctrlp.vim'
 Plug 'arcticicestudio/nord-vim', { 'on':  'NERDTreeToggle' }
 Plug 'flrnprz/candid.vim'
 Plug 'itchyny/lightline.vim'
@@ -130,6 +131,7 @@ let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ }
 
+let g:syntastic_rust_checkers = ['cargo']
 
 " Javascript
 set conceallevel=1
