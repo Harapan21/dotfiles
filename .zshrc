@@ -2,13 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/harapan/.oh-my-zsh"
+export ZSH="/Users/salam/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -62,7 +62,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(rustup httpie kubectl docker brew git golang osx postgres docker npm zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(cargo fd rustup httpie kubectl docker brew git golang osx postgres docker npm zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -109,14 +109,13 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-source /Users/harapan/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+# export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 
 # golang
 export WorkDir=/Volumes/DATA/coding
-export GOPATH=$WorkDir/go
+export GOPATH=$WorkDir/go/
 export PATH=$PATH:$GOPATH/bin
 
 export TERM=xterm-256color
@@ -124,3 +123,13 @@ export PATH="/usr/local/sbin:$PATH"
 export LC_ALL=en_US.UTF-8
 export MONO_GAC_PREFIX="/usr/local"
 export LIBRARY_PATH=:/usr/local/opt/openssl/lib/
+autoload -U compinit && compinit
+#source /Users/salam/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+
+#alias
+alias wrk="cd $WorkDir"
+alias ns="npm run start"
+alias cru="cargo run"
+alias ll="exa -l"
+alias ls="exa"
