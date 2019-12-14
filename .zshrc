@@ -110,12 +110,12 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 
-# export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 
 # golang
 export WorkDir=/Volumes/DATA/coding
-export GOPATH=$WorkDir/go/
+export GOPATH=$WorkDir/go
 export PATH=$PATH:$GOPATH/bin
 
 export TERM=xterm-256color
@@ -128,8 +128,11 @@ autoload -U compinit && compinit
 
 
 #alias
-alias wrk="cd $WorkDir"
+alias work="cd $WorkDir"
 alias ns="npm run start"
 alias cru="cargo run"
 alias ll="exa -l"
 alias ls="exa"
+
+eval "$(starship init zsh)"
+export LESSCHARSET=utf-8
